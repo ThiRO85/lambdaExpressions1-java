@@ -1,20 +1,28 @@
 package application;
 
-import entities.HelloInterface;
-import entities.HelloInterfaceImple;
+interface Test {
+    int addNumbers(int a, int b);
+}
 
 public class Main {
 
     public static void main(String[] args) {
 
-        //Before Java 8:
+        System.out.println("Start main");
+        Test test = (x, y) -> {
+            System.out.println("Inside lambda expression");
+            return x + y;
+        };
 
-        //HelloInterface helloInterface = new HelloInterfaceImple();
-        //helloInterface.displayHello();
+        System.out.println("Before calling addTwoNumbers method");
+        addTwoNumbers(test);
+        System.out.println("After calling addTwoNumbers method");
+        System.out.println("End main");
+    }
 
-        //After Java 8:
-
-        HelloInterface helloInterface = () -> System.out.println("Hello!");
-        helloInterface.displayHello();
+    public static void addTwoNumbers(Test test) {
+        System.out.println("Start addTwoNumbers method");
+        System.out.println("Sum of two numbers: " + test.addNumbers(10, 20));
+        System.out.println("End addTwoNumbers method");
     }
 }
