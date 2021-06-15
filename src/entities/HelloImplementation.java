@@ -1,6 +1,6 @@
 package entities;
 
-public class HelloInterfaceImple implements HelloInterface {
+public class HelloImplementation implements HelloInterface {
 
     @Override
     public void displayHello() {
