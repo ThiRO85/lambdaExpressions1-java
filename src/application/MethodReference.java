@@ -10,7 +10,7 @@ class SMRImplementation {
     }
 }
 
-public class StaticMR {
+public class MethodReference {
 
     public static void main(String[] args) {
 

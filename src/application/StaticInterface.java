@@ -6,7 +6,7 @@ interface StaticMethodInterface {
     }
 }
 
-public class StaticMethodDemo {
+public class StaticInterface {
 
     public static void main(String[] args) {
         StaticMethodInterface.myUtilityMethod();
